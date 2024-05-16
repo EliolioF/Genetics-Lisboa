@@ -9,4 +9,25 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Heyy
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install(c("zebrafishRNASeq", "EDASeq", "edgeR"))
+```
+
+```{r}
+library(zebrafishRNASeq)
+library(EDASeq)
+library(edgeR)
+```
+
+```{r}
+data(zfGenes)
+head(zfGenes)
+```
+
+```{r}
+zebra <- zfGenes
+head(zebra)
+```
