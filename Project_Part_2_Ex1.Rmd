@@ -1,0 +1,31 @@
+---
+title: "Project O.o"
+author: "Elio Fabbri and Carolina Rodrigues"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+#if (!require("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
+
+#BiocManager::install("limma")
+#BiocManager::install("RankProd")
+```
+
+
+```{r}
+library(limma)
+```
+
+```{r warning=FALSE}
+dados <- read.table("chip1.txt", header = T)
+dados
+```
+
